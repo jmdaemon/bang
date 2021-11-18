@@ -7,12 +7,6 @@ def main():
     args = parser.parse_args()
     fp = args.fp
 
-    def read_file(fname: str) -> str:
-        file = open(fname, 'r')
-        res = file.read()
-        file.close()
-        return res
-
     def module_from_file(module_name, file_path):
         spec = importlib.util.spec_from_file_location(module_name, file_path)
         module = importlib.util.module_from_spec(spec)
