@@ -8,7 +8,7 @@ setup(
     version="0.1.0",
     author="Joseph Diza",
     author_email="josephm.diza@gmail.com",
-    description="An all purpose general templating program, and project starter program",
+    description="Templating program to quickly start off projects with a bang",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/jmdaemon/bang",
