@@ -1,5 +1,5 @@
 import argparse
-import importlib.util
+import wora.dynmod
 
 def main():
     parser = argparse.ArgumentParser(description='An all purpose templating program to quickly start projects off with a bang')
@@ -7,11 +7,5 @@ def main():
     args = parser.parse_args()
     fp = args.fp
 
-    def module_from_file(module_name, file_path):
-        spec = importlib.util.spec_from_file_location(module_name, file_path)
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        return module
-
-    template = module_from_file("template", f'{fp}/template.py')
+    template = wora.dynmod.module_from_file("template", f'{fp}/template.py')
     template.bang(fp)
