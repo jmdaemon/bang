@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as fh:
 
 setup(
     name='bang-jmd',
-    version='0.1.2',
+    version='0.1.3',
     license='MIT',
     author='Joseph Diza',
     author_email='josephm.diza@gmail.com',
@@ -19,7 +19,7 @@ setup(
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
     python_requires='>=3.6',
-    py_modules=['bang'],
+    py_modules=['bang', 'bang.tmpl'],
     install_requires=[
         'argparse',
         'jinja2',
