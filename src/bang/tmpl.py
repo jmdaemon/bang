@@ -2,6 +2,7 @@ from jinja2 import Template
 from wora.file import read_file
 from pathlib import Path
 import plumbum
+import toml
 
 BANG_CONFIG_DIR = Path('~/.config/bang/templates').expanduser()
 
@@ -22,3 +23,9 @@ def output(dest, tmpl_name, tmpl):
 
 def promptf(prompt: str, val=''):
     return input(prompt.format(val)) or val
+
+def loadcfg(cfp, cfg):
+    hostfp = f'{BANG_CONFIG_DIR}/{cfp}'
+    if (to_path(hostfp).exists()):
+        return toml.loads(read_file(hostfp))["config"]
+    return cfg
