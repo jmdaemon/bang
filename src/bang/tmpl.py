@@ -3,6 +3,8 @@ from wora.file import read_file
 from pathlib import Path
 import plumbum
 
+BANG_CONFIG_DIR = Path('~/.config/bang/templates').expanduser()
+
 def to_path(fp):
     if isinstance(fp, Path):
         return fp
