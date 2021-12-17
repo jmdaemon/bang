@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as fh:
 
 setup(
     name='bang-jmd',
-    version='0.1.4',
+    version='0.1.5',
     license='MIT',
     author='Joseph Diza',
     author_email='josephm.diza@gmail.com',

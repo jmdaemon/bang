@@ -17,3 +17,6 @@ def render(src, tmpl_name, vardict):
 def output(dest, tmpl_name, tmpl):
     dest = str(to_path(dest) / tmpl_name)
     (plumbum.cmd.echo[tmpl] > dest)()
+
+def promptf(prompt: str, val=''):
+    return input(prompt.format(val)) or val
