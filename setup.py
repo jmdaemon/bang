@@ -27,7 +27,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'bang = bang:main',
+            'bang = bang.bang:main',
         ],
     },
     test_suite='tests',
