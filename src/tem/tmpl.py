@@ -4,7 +4,7 @@ from pathlib import Path
 import plumbum
 import toml
 
-BANG_CONFIG_DIR = Path('~/.config/bang/templates').expanduser()
+TEM_CONFIG_DIR = Path('~/.config/tem/templates').expanduser()
 
 def to_path(fp):
     if isinstance(fp, Path):
@@ -25,7 +25,7 @@ def promptf(prompt: str, val=''):
     return input(prompt.format(val)) or val
 
 def loadcfg(cfp, cfg):
-    hostfp = f'{BANG_CONFIG_DIR}/{cfp}'
+    hostfp = f'{TEM_CONFIG_DIR}/{cfp}'
     if (to_path(hostfp).exists()):
         return toml.loads(read_file(hostfp))["config"]
     return cfg

@@ -1,6 +1,6 @@
 # Bang
 
-An all purpose templating program to quickly start projects off with a bang.
+General purpose templating program to quickly setup projects and files
 
 ## Usage
 

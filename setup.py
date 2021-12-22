@@ -4,12 +4,12 @@ with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
 setup(
-    name='bang-jmd',
+    name='tem',
     version='0.1.7',
     license='MIT',
     author='Joseph Diza',
     author_email='josephm.diza@gmail.com',
-    description='Templating program to quickly start off projects with a bang',
+    description='General purpose templating program to quickly setup projects and files',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/jmdaemon/bang',
@@ -19,7 +19,7 @@ setup(
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
     python_requires='>=3.6',
-    py_modules=['bang', 'bang.tmpl'],
+    py_modules=['tem', 'tem.tmpl'],
     install_requires=[
         'argparse',
         'jinja2',
@@ -27,7 +27,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'bang = bang.bang:main',
+            'tem = tem.tem:main',
         ],
     },
     test_suite='tests',
