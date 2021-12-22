@@ -1,4 +1,4 @@
-# Bang
+# Tem
 
 General purpose templating program to quickly setup projects and files
 
