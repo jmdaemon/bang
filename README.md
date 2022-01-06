@@ -1,4 +1,4 @@
-# Tem
+# Clopy
 
 General purpose templating program to quickly setup projects and files
 
@@ -13,5 +13,5 @@ General purpose templating program to quickly setup projects and files
 ## Templates Aliases
 
 If you find that a path is too long to type out or that you always find yourself typing
-out the path to a certain template file, you can alias it using the `~/.config/bang/templates.json`
+out the path to a certain template file, you can alias it using the `~/.config/clopy/templates.json`
 file. There's an example `templates.json` included in the root direct of the repository.

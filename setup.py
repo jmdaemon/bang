@@ -4,7 +4,7 @@ with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
 setup(
-    name='tem',
+    name='clopy',
     version='0.1.7',
     license='MIT',
     author='Joseph Diza',
@@ -19,7 +19,7 @@ setup(
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
     python_requires='>=3.6',
-    py_modules=['tem', 'tem.tmpl'],
+    py_modules=['clopy', 'clopy.tmpl'],
     install_requires=[
         'argparse',
         'jinja2',
@@ -27,7 +27,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'tem = tem.tem:main',
+            'clopy = clopy.clopy:main',
         ],
     },
     test_suite='tests',

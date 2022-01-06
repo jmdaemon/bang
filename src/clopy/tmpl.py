@@ -4,7 +4,7 @@ from pathlib import Path
 import plumbum
 import toml
 
-TEM_CONFIG_DIR = Path('~/.config/tem/templates').expanduser()
+CLOPY_CONFIG_DIR = Path('~/.config/clopy/templates').expanduser()
 
 def to_path(fp):
     if isinstance(fp, Path):
@@ -25,7 +25,7 @@ def promptf(prompt: str, val=''):
     return input(prompt.format(val)) or val
 
 def loadcfg(cfp, cfg):
-    hostfp = f'{TEM_CONFIG_DIR}/{cfp}'
+    hostfp = f'{CLOPY_CONFIG_DIR}/{cfp}'
     if (to_path(hostfp).exists()):
         return toml.loads(read_file(hostfp))["config"]
     return cfg
