@@ -69,7 +69,7 @@ def mkdest(path: Path, cmd: str):
             if (cmd == 'init' or (overwrite.lower() == 'n' or overwrite.lower() == 'no')):
                 return 0
 
-def init_all(tmpls: dict) -> dict:
+def init_all(fp:str, tmpls: dict) -> dict:
     ''' Renders all file templates, and returns the output files '''
     outputs = {}
     for name, vardict in tmpls.items():
