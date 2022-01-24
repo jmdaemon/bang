@@ -7,8 +7,8 @@ import pathlib
 
 def main():
     parser = argparse.ArgumentParser(description='An all purpose templating program to quickly start projects off with a bang')
-    parser.add_argument('fp', type=str, help='Filepath to template directory')
     parser.add_argument('cmd', type=str, help='Commands to use are: init, new [default: init]')
+    parser.add_argument('fp', type=str, help='Filepath to template directory')
 
     args = parser.parse_args()
     fp  = args.fp
