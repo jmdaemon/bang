@@ -3,9 +3,10 @@ from setuptools import find_packages, setup
 with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
+exec(open('src/clopy/version.py').read())
 setup(
     name='clopy',
-    version='0.1.10',
+    version=__version__,
     license='MIT',
     author='Joseph Diza',
     author_email='josephm.diza@gmail.com',
