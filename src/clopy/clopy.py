@@ -11,10 +11,13 @@ def main():
     parser.add_argument('cmd', type=str, help='Commands to use are: init, new [default: init]')
 
     args = parser.parse_args()
-    fp = args.fp
+    fp  = args.fp
     cmd = args.cmd if args.cmd else "init"
 
+    # Read in the tool config
     cfg = wora.file.read_file(pathlib.Path(f'{CLOPY_CONFIG_DIR}/templates.json'))
+
+    # Find the`template.py` file in `fp`
     if (cfg is not None):
         o = json.loads(cfg)
         for name, tmplfp in o['templates'].items():
@@ -22,5 +25,5 @@ def main():
                 fp = pathlib.Path(tmplfp).expanduser()
                 break
 
-    template = wora.dynmod.module_from_file("template", f'{fp}/template.py')
-    template.bang(fp, cmd)
+    template = wora.dynmod.module_from_file("template", f'{fp}/template.py') # Hooks into `template.py`
+    template.bang(fp, cmd) # Execute the template
