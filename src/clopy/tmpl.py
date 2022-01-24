@@ -34,11 +34,18 @@ def output(dest: str, tmpl_name: str, tmpl: str):
     dest = str(to_path(dest) / tmpl_name)
     (plumbum.cmd.echo[tmpl] > dest)()
 
-def promptf(prompt: str, val='') ->str:
+def promptf(prompt: str, val='') -> str:
     ''' Prompts the user with the given message and defaults to a set value if null'''
     return input(prompt.format(val)) or val
 
-def loadcfg(cfp: str, cfg: dict) ->dict:
+def match(s: str, choices: list) -> bool:
+    ''' Checks if a str matches the given choices '''
+    for choice in choices:
+        if s == choice:
+            return True
+    return False
+
+def loadcfg(cfp: str, cfg: dict) -> dict:
     ''' Loads the given config file for a template
         cfp: Config file path
         cfg: Default/Empty config file dictionary
