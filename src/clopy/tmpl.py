@@ -58,6 +58,17 @@ def loadcfg(cfp: str, cfg: dict) -> dict:
         return toml.loads(read_file(hostfp))["config"]
     return cfg
 
+def mkdest(path: Path, cmd: str):
+    ''' Initializes or overwrites the destination directory '''
+    if (not path.exists()): # If dest doesn't exist
+        mkdir(path)
+    elif (len([path.iterdir()]) != 0): # If dest is not empty
+        overwrite = ''
+        while (not match(overwrite.lower(), ['y', 'n', 'no', 'yes'])):
+            overwrite = input((f'{path} is not empty. Overwrite? [y/n]: '))
+            if (cmd == 'init' or (overwrite.lower() == 'n' or overwrite.lower() == 'no')):
+                return 0
+
 def init_all(tmpls: dict) -> dict:
     ''' Renders all file templates, and returns the output files '''
     outputs = {}
