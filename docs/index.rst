@@ -11,11 +11,11 @@ Table of Contents
    :maxdepth: 2
    :caption: Contents:
 
-    install
-    quickstart
-    cmds
-    config
-    api
+   install
+   quickstart
+   cmds
+   config
+   api
 
 
 
