@@ -11,16 +11,8 @@ def get_data_files():
 
     return data_files
 
-# exec(open('src/clopy/version.py').read()) # Imports __version__
-# Imports __version__
-# verpath='./src/clopy/version.py'
-# version = {}
-# with open(verpath) as fp:
-    # exec(fp.read(), version)
-
 setup(
     name='clopy',
-    # version=version['__version__'],
     license='MIT',
     author='Joseph Diza',
     author_email='josephm.diza@gmail.com',
