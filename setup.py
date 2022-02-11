@@ -3,10 +3,24 @@ from setuptools import find_packages, setup
 with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
-exec(open('src/clopy/version.py').read())
+def get_data_files():
+    data_files = [
+        ('share/doc/glances', ['README.md', 'LICENSE']),
+        ('share/man/man1', ['docs/man/clopy.1'])
+    ]
+
+    return data_files
+
+# exec(open('src/clopy/version.py').read()) # Imports __version__
+# Imports __version__
+# verpath='./src/clopy/version.py'
+# version = {}
+# with open(verpath) as fp:
+    # exec(fp.read(), version)
+
 setup(
     name='clopy',
-    version=__version__,
+    # version=version['__version__'],
     license='MIT',
     author='Joseph Diza',
     author_email='josephm.diza@gmail.com',
@@ -14,6 +28,7 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/jmdaemon/bang',
+    data_files=get_data_files(),
     project_urls={
         'Bug Tracker': 'https://github.com/jmdaemon/bang/issues',
     },
