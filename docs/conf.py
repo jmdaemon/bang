@@ -1,3 +1,4 @@
+from clopy import __version__
 # Configuration file for the Sphinx documentation builder.
 #
 # This file only contains a selection of the most common options. For a full
@@ -22,7 +23,9 @@ copyright = '2022, Joseph Diza'
 author = 'Joseph Diza'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.9'
+# release = '0.1.9'
+
+release = __version__
 
 
 # -- General configuration ---------------------------------------------------
