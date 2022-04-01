@@ -13,7 +13,7 @@ def get_data_files():
 
 setup(
     name='clopy',
-    license='MIT',
+    license='GPL-3.0',
     author='Joseph Diza',
     author_email='josephm.diza@gmail.com',
     description='General purpose templating program to quickly setup projects and files',
@@ -24,6 +24,11 @@ setup(
     project_urls={
         'Bug Tracker': 'https://github.com/jmdaemon/bang/issues',
     },
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'OSI Approved :: GNU General Public License v3 or later (GPLv3+)'
+        'Operating System :: OS Independent'
+    ],
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
     python_requires='>=3.6',
