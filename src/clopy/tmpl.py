@@ -1,5 +1,5 @@
 from jinja2 import Template
-from wora.file import read_file, mkdir
+from wora.file import read_file, mkdir, load_toml_config, to_path
 from pathlib import Path
 import plumbum
 import toml
@@ -7,13 +7,6 @@ import toml
 ''' Common template functions are stored here '''
 
 CLOPY_CONFIG_DIR = Path('~/.config/clopy/templates').expanduser()
-
-def to_path(fp: str) -> Path:
-    ''' Convert str to Path '''
-    if isinstance(fp, Path):
-        return fp
-    elif isinstance(fp, str):
-        return Path(fp)
 
 def render(src: str, tmpl_name: str, vardict: dict) -> str:
     ''' Renders the template file
@@ -54,9 +47,7 @@ def loadcfg(cfp: str, cfg: dict) -> dict:
         the config file as a dict if it exists, and returns cfg if the dict doesn't exist.
     '''
     hostfp = f'{CLOPY_CONFIG_DIR}/{cfp}'
-    if (to_path(hostfp).exists()):
-        return toml.loads(read_file(hostfp))["config"]
-    return cfg
+    return load_toml_config(hostfp)["config"]
 
 def mkdest(path: Path, cmd: str):
     ''' Initializes or overwrites the destination directory '''
