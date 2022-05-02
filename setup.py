@@ -37,6 +37,7 @@ setup(
         'argparse',
         'jinja2',
         'wora',
+        'plumbum',
     ],
     entry_points={
         'console_scripts': [
