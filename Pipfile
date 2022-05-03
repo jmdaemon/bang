@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 clopy = {editable = true, path = "."}
-argparse = "*"
 jinja2 = "*"
 wora = "*"
 plumbum = "*"
