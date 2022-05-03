@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d93ef572a769739698fa45d5732eab5676f9c26afbc37456ed82269c26e884ca"
+            "sha256": "76301af392b61a850dfaf3d2d487a0842b5530c82ea6b33b219f8c32c2e05491"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -25,12 +25,8 @@
             "version": "==1.4.0"
         },
         "clopy": {
-            "hashes": [
-                "sha256:9e6f7d2069d1c53205c86feef56f8872ac9c18aca262c1aeb46c49dee20c0e21",
-                "sha256:eac3dbc21d6d0bf792a77b51d13734a6eb82cd36224e0aaffeb1c72f5b7c2cf2"
-            ],
-            "index": "pypi",
-            "version": "==0.1.12"
+            "editable": true,
+            "path": "."
         },
         "jinja2": {
             "hashes": [
