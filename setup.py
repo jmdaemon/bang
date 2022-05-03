@@ -26,7 +26,6 @@ setup(
     },
     classifiers=[
         'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: GNU General Public License v3'
         'Operating System :: OS Independent'
     ],
     package_dir={'': 'src'},
